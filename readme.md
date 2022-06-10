@@ -1,5 +1,28 @@
 # Arsen's Telegram bot
 
+## Installation
+1. Clone the repository:
+
+`git clone https://github.com/apcor/learn_bot.git`
+
+2. Create a virtual environment:
+```
+python3 -m venv env
+source env/bin/activate
+```
+
+3. Install all required dependencies: 
+
+`pip install -r requirements.txt`
+
+4. Create a `settings.py` file.
+5. Insert the following commands in `settings.py` :
+```
+API_KEY = 'API key received from @BotFather'
+USER_EMOJI = [':grinning:', ':neckbeard:', ':zzz:', ':hurtrealbad:', ':pig:', ':dog2:']
+```
+6. Initiate the bot with the console command `python3 bot.py`
+
 ## General info
 
 This bot was created by **Arsen Sogoyan** during the [Learn Python course](https://learn.python.ru/) (*14/05/2022 - 16/07/2022*).
@@ -30,3 +53,16 @@ Passing a `/dog` command to the bot returns a random dog photo from the folder `
 - ### Random emoji assigned to each user
 
 Passing a `/start` or sending a message to the bot (see _**ECHO**_ feature above) triggers the bot's response accompanied by a randomly-chosen emoji from a pre-defined list in `settings.py`. Python [`emoji` library](https://pypi.org/project/emoji/) was used, along with `random`.
+
+- ### Keyboard and Location
+Two keyword buttons are introduced in the chat interface:
+    
+1. #### Send me a dog
+
+This button replaces the manual input of `/dog` to request a random dog image.
+
+2. #### See my location
+
+This button gets your current location and returns to the user their coordinates and a small map preview.
+
+**Warning:** works seamlessly on mobile phones. 
