@@ -50,6 +50,11 @@ Now all the modules reuired by the bot to function are listed in the `requiremen
 
 Passing a `/dog` command to the bot returns a random dog photo from the folder `images/`. Python native [`glob`](https://docs.python.org/3/library/glob.html) and [`random`](https://docs.python.org/3/library/random.html) libraries are employed here.
 
+- ### Dog recognition on a photo
+
+Sending an image to the bot prompts checks via [Clarifai API](https://docs.clarifai.com/api-guide/api-overview/) whether there is a dog on the sent image (decision threshold is `0.90`). Verified dog images are saved to the folder that serves random dog images (_see previous item_)
+
+
 - ### Random emoji assigned to each user
 
 Passing a `/start` or sending a message to the bot (see _**ECHO**_ feature above) triggers the bot's response accompanied by a randomly-chosen emoji from a pre-defined list in `settings.py`. Python [`emoji` library](https://pypi.org/project/emoji/) was used, along with `random`.
